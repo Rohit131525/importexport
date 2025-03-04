@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+</head>
+<body>
+    <h1>Payment Gateway</h1>
+    <form>
+        <label for="upi-id">UPI ID:</label>
+        <input type="text" id="upi-id" name="upi-id" required>
+        <br><br>
+        <label for="qr-code">Scan QR Code:</label>
+        <br>
+        <img src="path/to/qr-code.png" alt="QR Code" id="qr-code">
+        <br><br>
+        <button type="submit">Pay Now</button>
+    </form>
+    <script>
+    document.querySelector('form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        alert('Payment successful! Your account has been debited.');
+    });
+</script>
