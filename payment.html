@@ -4,22 +4,100 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Payment Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        .form-group button {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        .form-group button:hover {
+            background-color: #218838;
+        }
+        body{
+            text-align: center;
+            padding: 100px 0;
+            background-color: #f4f4f4;
+            background: url('paymentgateway.jpg') no-repeat center center fixed;
+            height: 100vh;
+            background-size: cover;
+        }
+    </style>
 </head>
 <body>
-    <h1>Payment Gateway</h1>
+    <div class="container">
+        <h2>Payment Information</h2>
+        <form>
+            <div class="form-group">
+                <label for="cardName">Name on Card</label>
+                <input type="text" id="cardName" name="cardName" required>
+            </div>
+            <div class="form-group">
+                <label for="cardNumber">Card Number</label>
+                <input type="text" id="cardNumber" name="cardNumber" required>
+            </div>
+            <div class="form-group">
+                <label for="expDate">Expiration Date</label>
+                <input type="text" id="expDate" name="expDate" placeholder="MM/YY" required>
+            </div>
+            <div class="form-group">
+                <label for="cvv">CVV</label>
+                <input type="text" id="cvv" name="cvv" required>
+            </div>
+            <div class="form-group">
+                <button type="submit">Submit Payment</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
+<div class="container"></div>
+    <h2>UPI Payment</h2>
     <form>
-        <label for="upi-id">UPI ID:</label>
-        <input type="text" id="upi-id" name="upi-id" required>
-        <br><br>
-        <label for="qr-code">Scan QR Code:</label>
-        <br>
-        <img src="path/to/qr-code.png" alt="QR Code" id="qr-code">
-        <br><br>
-        <button type="submit">Pay Now</button>
+        <div class="form-group">
+            <label for="upiId">UPI ID</label>
+            <input type="text" id="upiId" name="upiId" required>
+        </div>
+        <div class="form-group">
+            <button type="submit">Submit UPI Payment</button>
+        </div>
     </form>
-    <script>
-    document.querySelector('form').addEventListener('submit', function(event) {
-        event.preventDefault();
-        alert('Payment successful! Your account has been debited.');
-    });
-</script>
+</div>
+<div class="container">
+    <h2>QR Code Payment</h2>
+    <div class="form-group">
+        <img src="path/to/your/qr-code.png" alt="QR Code" style="width:100%;">
+    </div>
+</div>
+
